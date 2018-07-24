@@ -1,0 +1,36 @@
+{
+  "name": "objectfully",
+  "version": "0.0.0",
+  "description": "Utility for manipulating and normalizing objects based on a templated dot notation",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test nyc --all --reporter=text --reporter=html --reporter=cobertura --reporter=lcov mocha --exit -t 60000 'test/specs/**/*.spec.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-a-r-c-e-l-i-n-o/objectfully.git"
+  },
+  "keywords": [
+    "object",
+    "dot-notation",
+    "normalize",
+    "manipulate"
+  ],
+  "author": "Marcelino Braulio <me@marceli.no>",
+  "license": "ISC",
+  "engines": {
+    "node": "8"
+  },
+  "bugs": {
+    "url": "https://github.com/m-a-r-c-e-l-i-n-o/objectfully/issues"
+  },
+  "homepage": "https://github.com/m-a-r-c-e-l-i-n-o/objectfully#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "nyc": "^12.0.2"
+  },
+  "dependencies": {
+    "cfenv": "^1.1.0"
+  }
+}
