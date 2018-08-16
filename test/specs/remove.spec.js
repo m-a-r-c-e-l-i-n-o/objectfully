@@ -12,24 +12,28 @@ describe('remove()', () => {
         const a = JSON.parse(JSON.stringify(object))
         const b = JSON.parse(JSON.stringify(object))
         delete b.one
-        expect(remove('#{one}', a)).to.deep.equal(b)
+        remove('#{one}', a)
+        expect(a).to.deep.equal(b)
     })
     it('Should remove two levels of dot notation', () => {
         const a = JSON.parse(JSON.stringify(object))
         const b = JSON.parse(JSON.stringify(object))
         delete b.one.two
-        expect(remove('#{one.two}', a)).to.deep.equal(b)
+        remove('#{one.two}', a)
+        expect(a).to.deep.equal(b)
     })
     it('Should remove three levels of dot notation', () => {
         const a = JSON.parse(JSON.stringify(object))
         const b = JSON.parse(JSON.stringify(object))
         delete b.one.two.three
-        expect(remove('#{one.two.three}', a)).to.deep.equal(b)
+        remove('#{one.two.three}', a)
+        expect(a).to.deep.equal(b)
     })
     it('Should remove four levels of dot notation', () => {
         const a = JSON.parse(JSON.stringify(object))
         const b = JSON.parse(JSON.stringify(object))
         delete b.one.two.three.four
-        expect(remove('#{one.two.three.four}', a)).to.deep.equal(b)
+        remove('#{one.two.three.four}', a)
+        expect(a).to.deep.equal(b)
     })
 })
